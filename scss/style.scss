@@ -37,3 +37,106 @@
   &__link {}
 }
 //?----------------------------- header -- end -----------------------------
+//!----- footer -----
+//?----------------------------- footer ------------------------------------
+.footer {
+  
+  color: #FFFFFF;
+  background: #151515;
+  padding: 25px 0 25px;
+  &__container {}
+  &__menu {
+    padding: 25px 0 25px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    //!------------------  media -- max-width -- 992px  ------------------
+    @media(max-width:992px) {
+      // padding: 25px 25px 25px;
+      // gap: 30px;
+    }
+  }
+  &__column {
+    max-width: 25%;
+    //!------------------  media -- max-width -- 992px  ------------------
+    @media(max-width:992px) {
+      max-width: none;
+      flex: 0 1 50%;
+      padding-left: 30px;
+    }
+    //!------------------  media -- max-width -- 636px  ------------------
+    @media(max-width:636px) {
+      // padding-left: 50px;
+      padding-left: calc(0px + 50 * ((100vw - 320px) / (636 - 320)));
+      flex: 0 1 100%;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(29px / 24px * 100%);
+    margin-bottom: 40px;
+    @media(max-width:992px) {
+      margin-bottom: 20px;
+    }
+  }
+  &__list {}
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      @media(max-width:992px) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &__link {
+    line-height: 130%;
+  }
+  &__app {}
+  &__copy {}
+  &__nav {}
+}
+.app-footer {
+  display: flex;
+  justify-content: center;
+  padding: 13px 0;
+  // gap-x: 25px;
+  column-gap: 25px;
+  // margin-bottom: -20px;
+  flex-wrap: wrap;
+  &__item {
+    padding: 12px 0;
+    &:not(:last-child) {
+      // padding: 0 40px 20px 0;
+    }
+  }
+  &__link {}
+  &__img {}
+}
+.copy {
+  padding: 13px 0;
+  max-width: 800px;
+  margin: 0 auto;
+  &__text {
+    font-size: 12px;
+    line-height: calc(15px / 12px * 100%);
+    text-align: center;
+  }
+}
+.nav-footer {
+  padding: 17px 0 10px;
+  &__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+  }
+  &__item {}
+  &__link {
+    &:hover{
+
+    }
+  }
+}
+//?----------------------------- footer -- end -----------------------------
+@import 'media.scss'

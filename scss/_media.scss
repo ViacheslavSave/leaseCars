@@ -1,0 +1,62 @@
+//!----- header -----
+//?----------------------------- header -- media ---------------------------
+.header {
+  &__container {}
+  &__inner {}
+  &__logo {}
+  &__menu {}
+}
+.logo-header {
+  &__img {}
+}
+.menu {
+  &__list {}
+  &__item {}
+  &__link {}
+}
+
+//?----------------------------- header -- end -----------------------------
+//!----- footer -----
+//?----------------------------- footer -- media ---------------------------
+.footer {
+  &__container {}
+  &__menu {}
+  &__column {}
+  &__title {}
+  &__list {}
+  &__item {}
+  &__link {}
+  &__app {}
+  &__copy {}
+  &__nav {}
+}
+.app-footer {
+  &__item {}
+  &__link {}
+  &__img {}
+}
+.copy {
+  &__text {}
+}
+.nav-footer {
+  &__list {}
+  &__item {}
+  &__link {}
+}
+//!------------------  media -- max-width -- 667px  ------------------
+@media(max-width:667px){
+  .nav-footer {
+
+    &__list {
+      // display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    text-align: center;
+  }
+    &__item {}
+    &__link {}
+  }
+}
+
+
+//?----------------------------- footer -- end -----------------------------

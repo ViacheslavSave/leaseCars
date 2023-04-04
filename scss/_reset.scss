@@ -10,6 +10,9 @@
 a {
   text-decoration: none;
   color: inherit;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 ul,
 ol,
@@ -48,6 +51,8 @@ body {
 .wrapper {
   min-height: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .ibg {
   position: relative;
@@ -60,6 +65,6 @@ body {
   width: 100%;
   object-fit: cover;
 }
-.page {
+.main {
   flex: 1 1 auto;
 }
