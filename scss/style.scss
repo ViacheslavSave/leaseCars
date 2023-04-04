@@ -1,0 +1,39 @@
+@import "_reset.scss";
+//!----- header -----
+//?----------------------------- header ------------------------------------
+.header {
+  background-color: rgb(116, 118, 248);
+  &__container {}
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+  }
+  &__logo {}
+  &__menu {
+    // height: 100%;
+    // display: flex;
+    align-self: flex-end;
+  }
+}
+.logo-header {
+  &__img {}
+}
+.menu {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(19px / 16px * 100%);
+  text-transform: uppercase;
+  color: #FFFFFF;
+  &__list {
+    display: flex;
+    // align-items: flex-end;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+  &__link {}
+}
+//?----------------------------- header -- end -----------------------------
