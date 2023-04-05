@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="https://fonts.googleapis.com/css?family=Inter:regular,700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 		<link rel="stylesheet" href="css/style.css" />
 		<title>leaseCars</title>
 	</head>
@@ -28,7 +29,24 @@
 					</div>
 				</div>
 			</header>
-			<main class="main"></main>
+			<main class="main">
+				<section class="top">
+					<div class="top__container">
+						<h1 class="top__title">Leasing From D&M</h1>
+						<a class="top__button button-block" href="#">FIND A CAR</a>
+					</div>
+
+					<div class="top__slider slider-top swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide slider-top__item ibg1"><img src="images/top/top-1.jpg" alt="car" /></div>
+							<div class="swiper-slide slider-top__item ibg1"><img src="images/top/top-2.jpg" alt="car" /></div>
+							<div class="swiper-slide slider-top__item ibg1"><img src="images/top/top-1.jpg" alt="car" /></div>
+							<div class="swiper-slide slider-top__item ibg1"><img src="images/top/top-2.jpg" alt="car" /></div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</section>
+			</main>
 			<footer class="footer">
 				<div class="footer__container">
 					<nav class="footer__menu">
@@ -131,5 +149,8 @@
 				</div>
 			</footer>
 		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>
