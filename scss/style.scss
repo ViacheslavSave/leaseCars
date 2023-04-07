@@ -14,6 +14,9 @@
     justify-content: space-between;
     padding: 40px 0 45px;
   }
+  &--black {
+    background: #151515;
+  }
   &__logo {}
   &__menu {
     // height: 100%;
@@ -175,9 +178,9 @@
   display: inline-block;
   background: #151515;
   padding: 13px 61px;
-  margin: 0 auto;
-  max-width: 300px;
-  // text-align: center;
+  // margin: 0 auto;
+  min-width: 300px;
+  text-align: center;
 }
 .slider-top {
   &::before {
@@ -215,29 +218,192 @@
   z-index: 3;
 }
 .swiper-pagination-bullet {
-  // max-width: 120px !important;
-  // color: #151515 !important;
-  // margin-right: 30px !important;
   width: 120px !important;
   height: 3px;
-  // color: #151515 !important;
   background-color: #151515 !important;
   margin-right: 30px !important;
   opacity: 1 !important;
   border-radius: 0 !important;
 }
 .swiper-pagination-bullet-active {
-  color: #fff !important;
   background-color: #fff !important;
   height: 6px;
 }
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  // width: 120px;
-  // color: #151515;
-  // margin-right: 30px;
-  // opacity: 1;
-  // border-radius: 0;
-}
 //?----------------------------- swiper -- end -----------------------------
+//!----- whylease -----
+//?----------------------------- whylease ------------------------------------
+.whylease {
+  padding: 150px 0 75px;
+  &__container {}
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__list {}
+}
+.title-block {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: calc(58px / 48px * 100%);
+  text-align: center;
+}
+.list-whylease {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  // display: flex;
+  // flex: 0 1 25%;
+  // max-width: 20%;
+  // flex-wrap: wrap;
+  // margin: 0 -15px -30px;
+  // justify-content: space-between;
+  // gap: 30px;
+  &__item {
+    // flex: 0 1 25%;
+    // max-width: 20%;
+    // flex-wrap: wrap;
+    text-align: center;
+    // padding: 0 15px 30px;
+    > *:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  &__img {}
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(29px / 24px * 100%);
+  }
+  &__text {
+    text-align: left;
+    line-height: 130%;
+  }
+}
+//?----------------------------- whylease -- end -----------------------------
+//!----- howdoes -----
+//?----------------------------- howdoes ------------------------------------
+.how-does {
+  padding: 75px 0;
+  &__container {
+    max-width: 600px;
+  }
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__text {
+    margin-bottom: 50px;
+    line-height: 130%;
+  }
+  &__text:last-child {
+    margin-bottom: 0px;
+  }
+  &__similar {
+    margin-bottom: 50px;
+  }
+  &__list {
+    // list-style-type: decimal;
+    margin-bottom: 70px;
+    counter-reset: myCounter;
+    // display: flex;
+  }
+  &__item {
+    position: relative;
+    padding-left: auto;
+    margin-left: auto;
+    width: 45%;
+    min-width: 270px;
+    min-height: 100px;
+    padding-top: 20px;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+    &::before {
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 48px;
+      background: #0066FF;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: -220px;
+      // width:100%;
+      // z-index: 50;
+    }
+  }
+}
+//?----------------------------- howdoes -- end -----------------------------
+//!----- welcome -----
+//?----------------------------- welcome ------------------------------------
+.welcome {
+  padding: 75px 0;
+  &__container {}
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__text {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(29px / 24px * 100%);
+    text-align: center;
+  }
+  &__video {
+    position: relative;
+    // max-width: 1000px;
+    // height: 56%;
+    margin: 0 auto;
+    // padding: 0 100px 56%;
+    // padding-bottom: 50%;
+    iframe {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      // width: 100%;
+      height: 100%;
+      max-width: 1000px;
+    }
+  }
+}
+//?----------------------------- welcome -- end -----------------------------
+//!----- important -----
+//?----------------------------- important ------------------------------------
+.important {
+  padding: 75px 0 150px;
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__text {
+    // margin-bottom: 50px;
+    margin: 0 auto 50px;
+    max-width: 580px;
+  }
+  &__list {
+    display: flex;
+    margin: -20px;
+    // flex-wrap: wrap;
+  }
+  &__item {
+    flex: 0 1 25%;
+    padding: 20px;
+  }
+  &__img {
+    margin-bottom: 20px;
+    img {
+      object-fit: cover;
+      max-width: 100%;
+    }
+  }
+  &__discription {
+    line-height: 130%;
+  }
+}
+//?----------------------------- important -- end -----------------------------
 @import 'media.scss'

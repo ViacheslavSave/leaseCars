@@ -14,7 +14,6 @@
   &__item {}
   &__link {}
 }
-
 //?----------------------------- header -- end -----------------------------
 //!----- footer -----
 //?----------------------------- footer -- media ---------------------------
@@ -44,39 +43,167 @@
   &__link {}
 }
 //!------------------  media -- max-width -- 667px  ------------------
-@media(max-width:667px){
+@media(max-width:667px) {
   .nav-footer {
-
     &__list {
       // display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-    text-align: center;
-  }
+      flex-direction: column;
+      row-gap: 20px;
+      text-align: center;
+    }
     &__item {}
     &__link {}
   }
 }
-
-
 //?----------------------------- footer -- end -----------------------------
 //!----- top -----
 //?----------------------------- top -- media ---------------------------
 .top {
- 
   &__container {}
   &__title {}
   &__button {}
 }
-
 //?----------------------------- top -- end -----------------------------
 //!----- swiper -----
 //?----------------------------- swiper -- media ---------------------------
 .swiper {
   // width: 600px;
   // height: 300px;
-  
-
 }
 //?----------------------------- swiper -- end -----------------------------
+//!----- whylease -----
+//?----------------------------- whylease -- media ---------------------------
+.whylease {
+  &__container {}
+  &__title {}
+  &__list {}
+}
+.title-block {}
+.list-whylease {
+  &__item {}
+  &__img {}
+  &__title {}
+  &__text {}
+}
+//!------------------  media -- max-width -- 1200px  ------------------
+@media(max-width:1200px) {
+  .whylease {
+    padding: calc(50px + 100 * ((100vw - 320px) / (1200 - 320))) 0px calc(50px + 25 * ((100vw - 320px) / (1200 - 320))) 0px;
+    &__container {}
+    &__title {}
+    &__list {}
+  }
+  .title-block {}
+  .list-whylease {
+    &__item {}
+    &__img {}
+    &__title {}
+    &__text {}
+  }
+}
+//!------------------  media -- max-width -- 1046px  ------------------
+@media(max-width:1046px) {
+  .whylease {
+    &__container {}
+    &__title {}
+    &__list {}
+  }
+  .title-block {}
+  .list-whylease {
+    &__item {
+      // flex: 0 1 50%;
+      // width: 40%;
+      // flex-wrap: wrap;
+    }
+    &__img {}
+    &__title {}
+    &__text {}
+  }
+}
+//!------------------  media -- max-width -- 667px  ------------------
+@media(max-width:667px) {
+  .whylease {
+    &__container {}
+    &__title {}
+    &__list {}
+  }
+  .title-block {}
+  .list-whylease {
+    &__item {
+      // flex: 0 1 100%;
+    }
+    &__img {}
+    &__title {}
+    &__text {}
+  }
+}
+//?----------------------------- whylease -- end -----------------------------
+//!----- howdoes -----
+//?----------------------------- howdoes -- media ---------------------------
+.how-does {
+  &__title {}
+  &__text {}
+  &__similar {}
+  &__list {}
+  &__item {}
+}
+.title-block {}
+//!------------------  media -- max-width -- 600px  ------------------
+@media(max-width:600px) {
+  .how-does {
+    &__title {}
+    &__text {}
+    &__similar {}
+    &__list {
+      background-color: rgba(255, 255, 255, 0.788);
+    }
+    &__item {
+      &::before {
+        // left: calc(75px + -295 * ((100vw - 320px) / (600 - 320)));
+        z-index: -1;
+      }
+      &.how-does__item--1{
+        &::before {
+          left: calc(10px + -295 * ((100vw - 320px) / (600 - 320)));
+        }
+      }
+      &.how-does__item--2 {
+        &::before {
+          left: calc(75px + -165 * ((100vw - 320px) / (600 - 320)));
+        }
+      }
+      &.how-does__item--3 {
+        &::before {
+          left: calc(142px + -22 * ((100vw - 320px) / (600 - 320)));
+        }
+      }
+    }
+  }
+}
+//?----------------------------- howdoes -- end -----------------------------
+//!----- welcome -----
+//?----------------------------- welcome -- media ---------------------------
+.welcome {
+  &__container {}
+  &__title {}
+  &__text {}
+  &__video {}
+}
+
+
+//?----------------------------- welcome -- end -----------------------------
+//!----- important -----
+//?----------------------------- important -- media ---------------------------
+.important {
+  &__title {}
+  &__text {}
+  &__list {}
+  &__item {}
+  &__img {}
+  &__discription {}
+}
+
+
+//?----------------------------- important -- end -----------------------------
+//   1046
 //   667
