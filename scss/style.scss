@@ -46,7 +46,7 @@
     color: #FFFFFF;
   }
   &__label {
-    text-decoration: underline;
+    color: #0066FF;
   }
   &__link {
     &:hover {
@@ -157,8 +157,13 @@
   }
 }
 //?----------------------------- footer -- end -----------------------------
-//!----- top -----
 //!----- button-block -----
+//!----- bitton inner -----
+//?----------------------------- bitton inner ------------------------------------
+.inner__button {
+  text-align: center;
+}
+//?----------------------------- bitton inner -- end -----------------------------
 //?----------------------------- button-block ------------------------------------
 .button-block {
   position: relative;
@@ -174,6 +179,7 @@
   margin: 0 auto;
 }
 //?----------------------------- button-block -- end -----------------------------
+//!----- top -----
 //?----------------------------- top ------------------------------------
 .top {
   color: #fff;
@@ -213,7 +219,7 @@
   &__item {
     img {
       object-fit: cover;
-      // object-position: bottom center;
+      object-position: center;
       width: 100%;
       height: 100%;
     }
@@ -270,19 +276,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  // display: flex;
-  // flex: 0 1 25%;
-  // max-width: 20%;
-  // flex-wrap: wrap;
-  // margin: 0 -15px -30px;
-  // justify-content: space-between;
-  // gap: 30px;
   &__item {
-    // flex: 0 1 25%;
-    // max-width: 20%;
-    // flex-wrap: wrap;
     text-align: center;
-    // padding: 0 15px 30px;
     > *:not(:last-child) {
       margin-bottom: 30px;
     }
@@ -373,22 +368,37 @@
     line-height: calc(29px / 24px * 100%);
     text-align: center;
   }
+  // &__video {
+  //   position: relative;
+  //   max-width: 1000px;
+  //   // height: 56%;
+  //   margin: 0 auto;
+  //   // padding: 0 100px 56%;
+  //   padding-bottom: 45%;
+  //   iframe {
+  //   //   display: block;
+  //     position: absolute;
+  //     top: 0;
+  //     right: 0;
+  //   //   left: 0;
+  //     width: 100%;
+  //     height: 100%;
+  //     max-width: 1000px;
+  //   }
+  // }
   &__video {
-    position: relative;
-    // max-width: 1000px;
-    // height: 56%;
+    max-width: 1000px;
     margin: 0 auto;
-    // padding: 0 100px 56%;
-    // padding-bottom: 50%;
+    div {
+      padding-bottom: 56%;
+      position: relative;
+    }
     iframe {
-      display: block;
+      width: 100%;
+      height: 100%;
       position: absolute;
       top: 0;
       right: 0;
-      left: 0;
-      // width: 100%;
-      height: 100%;
-      max-width: 1000px;
     }
   }
 }
@@ -541,10 +551,99 @@
     border: none;
     align-self: flex-start;
   }
-  &__inner {
-    // margin: 0 auto;
-    text-align: center;
-  }
+  &__inner {}
 }
 //?----------------------------- blog-row -- end -----------------------------
+//!----- choose -----
+//?----------------------------- choose ------------------------------------
+.choose {
+  padding: 150px 0;
+  &__container {}
+  &__title {
+    margin: 90px 0 50px;
+  }
+  &__tabs {
+    // margin-bottom: 100px;
+    margin: -20px auto 80px;
+  }
+  &__content {}
+  &__item {
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px 40px;
+    &.choose__item--active{
+display: grid;
+    }
+  }
+  &__card {}
+}
+.tabs-btn {
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  // margin: -20px;
+  &__item {
+    // padding: 20px;
+    margin: 20px;
+    font-family: Inter, sans-serif;
+    color: #151515;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(29px / 24px * 100%);
+    border: none;
+    background-color: transparent;
+    // border-radius: none;
+    // padding: 0;
+    &--active {
+      color: #0066FF;
+    }
+  }
+}
+.card {
+  border: 1px solid #0066FF;
+  text-align: center;
+ 
+
+  &__img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  &__content{
+padding: 0 10px;
+> * {
+  margin-bottom: 20px;
+  
+}
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(29px / 24px * 100%);
+  }
+  &__text {
+    line-height: 130%;
+  }
+  &__prise {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(29px / 24px * 100%);
+  }
+  &__link {
+    display: inline-block;
+    line-height: 130%;
+    color: #0066FF;
+    border-top: 1px solid #0066FF;
+    width: 100%;
+  }
+}
+.choose {
+  &__inner {
+    margin-top: 70px;
+  }
+}
+.inner {
+  &__button {}
+}
+//?----------------------------- choose -- end -----------------------------
 @import 'media.scss'

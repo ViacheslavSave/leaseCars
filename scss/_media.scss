@@ -228,5 +228,37 @@
 }
 
 //?----------------------------- blog-row -- end -----------------------------
+//!----- choose -----
+//?----------------------------- choose -- media ---------------------------
+.choose {
+  &__container {}
+  &__title {}
+  &__tabs {}
+  &__content {}
+  &__item {}
+  &__card {}
+}
+.title-block {
+}
+.tabs-btn {
+  &__item {}
+}
+.card {
+  &__img {}
+  &__title {}
+  &__text {}
+  &__prise {}
+  &__link {}
+}
+.choose {
+  &__inner {}
+}
+.inner {
+  &__button {}
+}
+.button-block {
+}
+
+//?----------------------------- choose -- end -----------------------------
 //   1046
 //   667

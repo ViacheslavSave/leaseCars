@@ -39,9 +39,9 @@ body {
 
 body {
   line-height: 1;
-  font-family: Inter, sans-serif;
   font-size: 16px;
   font-weight: 400;
+  font-family: Inter, sans-serif;
   color: #151515;
 }
 
@@ -110,7 +110,7 @@ body {
   color: #FFFFFF;
 }
 .menu__label {
-  text-decoration: underline;
+  color: #0066FF;
 }
 .menu__link:hover {
   text-decoration: underline;
@@ -200,6 +200,10 @@ body {
   -moz-column-gap: 40px;
        column-gap: 40px;
 }
+.inner__button {
+  text-align: center;
+}
+
 .button-block {
   position: relative;
   z-index: 2;
@@ -249,6 +253,8 @@ body {
 .slider-top__item img {
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   width: 100%;
   height: 100%;
 }
@@ -384,17 +390,19 @@ body {
   text-align: center;
 }
 .welcome__video {
-  position: relative;
+  max-width: 1000px;
   margin: 0 auto;
 }
+.welcome__video div {
+  padding-bottom: 56%;
+  position: relative;
+}
 .welcome__video iframe {
-  display: block;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   right: 0;
-  left: 0;
-  height: 100%;
-  max-width: 1000px;
 }
 
 .important {
@@ -540,8 +548,80 @@ body {
   border: none;
   align-self: flex-start;
 }
-.blog-row__inner {
+.choose {
+  padding: 150px 0;
+}
+.choose__title {
+  margin: 90px 0 50px;
+}
+.choose__tabs {
+  margin: -20px auto 80px;
+}
+.choose__item {
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 100px 40px;
+}
+.choose__item.choose__item--active {
+  display: grid;
+}
+.tabs-btn {
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+}
+.tabs-btn__item {
+  margin: 20px;
+  font-family: Inter, sans-serif;
+  color: #151515;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120.8333333333%;
+  border: none;
+  background-color: transparent;
+}
+.tabs-btn__item--active {
+  color: #0066FF;
+}
+
+.card {
+  border: 1px solid #0066FF;
   text-align: center;
+}
+.card__img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.card__content {
+  padding: 0 10px;
+}
+.card__content > * {
+  margin-bottom: 20px;
+}
+.card__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120.8333333333%;
+}
+.card__text {
+  line-height: 130%;
+}
+.card__prise {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120.8333333333%;
+}
+.card__link {
+  display: inline-block;
+  line-height: 130%;
+  color: #0066FF;
+  border-top: 1px solid #0066FF;
+  width: 100%;
+}
+
+.choose__inner {
+  margin-top: 70px;
 }
 
 @media (max-width: 667px) {
