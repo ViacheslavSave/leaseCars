@@ -10,9 +10,96 @@
   &__img {}
 }
 .menu {
+  &__btn {}
   &__list {}
   &__item {}
   &__link {}
+}
+//!------------------  media -- max-width -- 860px  ------------------
+@media(max-width:860px) {
+  .header {
+    &__container {}
+    &__inner {}
+    &__logo {}
+    &__menu {
+      align-self: center;
+    }
+  }
+  .logo-header {
+    &__img {
+      z-index: 10;
+    }
+  }
+  .menu {
+    &__btn {
+      display: flex;
+      position: relative;
+      z-index: 10;
+      span {
+        transition: all .3s;
+      }
+    }
+    &__btn--active {
+      span {
+        // background-color: #000;
+        &:first-child {
+          width: 50%;
+          transform: rotate(-21deg) translate(-2px, 4px); // transform: translateY(5px);
+        }
+        &:last-child {
+          width: 50%;
+          transform: rotate(21deg) translate(-3px, -5px);
+        }
+      }
+    }
+    &__list {
+      // display: none;
+      position: absolute;
+      left: -150vw;
+      visibility: hidden;
+      // opacity: 0;
+      // display: none;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      flex-direction: column;
+      padding-top: 125px;
+      background-color: rgb(0, 0, 0);
+      transition: all .6s;
+      z-index: 5;
+      align-items: center;
+      &--active {
+        // opacity: 1;
+        visibility: visible;
+        // display: flex;
+        left: 0vw;
+        .menu__item {
+          // position: relative;
+          left: 0px;
+        }
+        // display: flex;
+        // z-index:50;
+        // }
+        overflow-y: auto;
+        //  overflow: hidden;
+      }
+    }
+    &__item {
+      position: relative;
+      left: -50vw;
+      transition: all .3s .4s;
+      // transition-delay: 2s;
+      &:not(:last-child) {
+        margin-right: 0px;
+      }
+      margin-bottom: 20px;
+      &:not(:last-child) {}
+    }
+    &__label,
+    &__link {
+      // color: #151515;
+    }
+  }
 }
 //?----------------------------- header -- end -----------------------------
 //!----- footer -----
@@ -63,6 +150,46 @@
   &__title {}
   &__button {}
 }
+.slider-top {
+  &::before {}
+  &__item {
+    img {}
+  }
+  &__pagination {}
+}
+//!------------------  media -- max-width -- 1024px  ------------------
+@media(max-width:1024px) {
+  .top {
+    padding-top: calc(130px + 65 * ((100vw - 320px) / (1024 - 320)));
+    &__container {}
+    &__title {
+      font-size: calc(73px + 23 * ((100vw - 320px) / (1024 - 320)));
+    }
+    &__button {}
+  }
+}
+//!------------------  media -- min-width -- 779px  ------------------
+@media(min-width:778px) {
+  .top {
+    &__container {}
+    &__title {}
+    &__button {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: calc(44px / 36px * 100%);
+      padding: 23px 117px;
+    }
+  }
+  .slider-top {
+    &::before {}
+    &__item {
+      img {}
+    }
+    &__pagination {
+      display: inline-block;
+    }
+  }
+}
 //?----------------------------- top -- end -----------------------------
 //!----- swiper -----
 //?----------------------------- swiper -- media ---------------------------
@@ -101,8 +228,8 @@
     &__text {}
   }
 }
-//!------------------  media -- max-width -- 1046px  ------------------
-@media(max-width:1046px) {
+//!------------------  media -- max-width -- 1024px  ------------------
+@media(max-width:1024px) {
   .whylease {
     &__container {}
     &__title {}
@@ -110,6 +237,8 @@
   }
   .title-block {}
   .list-whylease {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
     &__item {
       // flex: 0 1 50%;
       // width: 40%;
@@ -117,7 +246,9 @@
     }
     &__img {}
     &__title {}
-    &__text {}
+    &__text {
+      // text-align: center;
+    }
   }
 }
 //!------------------  media -- max-width -- 667px  ------------------
@@ -137,6 +268,49 @@
     &__text {}
   }
 }
+//!------------------  media -- min-width -- 600px  ------------------
+@media(min-width:600px) {
+  .whylease {
+    padding: 75px 0 40px;
+    &__container {}
+    &__title {}
+    &__list {}
+  }
+  .title-block {}
+  .list-whylease {
+    display: grid;
+    &__item {
+      margin-bottom: 0;
+      > *:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+    &__img {}
+    &__title {}
+    &__text {
+      text-align: center;
+    }
+  }
+}
+//!------------------  media -- min-width -- 1024px  ------------------
+@media(min-width:1024px) {
+  .whylease {
+    &__container {}
+    &__title {}
+    &__list {}
+  }
+  .title-block {}
+  .list-whylease {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    &__item {}
+    &__img {}
+    &__title {}
+    &__text {
+      text-align: left;
+    }
+  }
+}
 //?----------------------------- whylease -- end -----------------------------
 //!----- howdoes -----
 //?----------------------------- howdoes -- media ---------------------------
@@ -151,6 +325,7 @@
 //!------------------  media -- max-width -- 600px  ------------------
 @media(max-width:600px) {
   .how-does {
+    padding: 50px 0;
     &__title {}
     &__text {}
     &__similar {}
@@ -189,16 +364,76 @@
   &__text {}
   &__video {}
 }
+//!------------------  media -- max-width -- 779px  ------------------
+@media(max-width:779px) {
+  .welcome {
+    padding: 50px 0;
+    &__container {}
+    &__title {}
+    &__text {}
+    &__video {}
+  }
+}
 //?----------------------------- welcome -- end -----------------------------
 //!----- important -----
 //?----------------------------- important -- media ---------------------------
 .important {
+  // padding: 50px 0 100px;
   &__title {}
-  &__text {}
-  &__list {}
-  &__item {}
+  &__text {
+    // margin: 0 auto 30px;
+  }
+  &__list {
+    // margin: -10px;
+  }
+  &__item {
+    // flex: 0 1 50%;
+    // padding: 10px;
+  }
   &__img {}
   &__discription {}
+}
+//!------------------  media -- max-width -- 1024px  ------------------
+@media(max-width:1023px) {
+  .important {
+    padding: 50px 0 70px;
+    &__title {}
+    &__text {
+      margin: 0 auto 30px;
+    }
+    &__list {
+      margin: -10px;
+    }
+    &__item {
+      flex: 0 1 50%;
+      padding: 10px;
+    }
+    &__img {}
+    &__discription {}
+  }
+}
+//!------------------  media -- min-width -- 480px  ------------------
+@media(min-width:480px) {
+  .important {
+    // padding: 50px 0 100px;
+    &__title {}
+    &__text {
+      // margin: 0 auto 30px;
+    }
+    &__list {
+      display: flex;
+      margin: -10px;
+      flex-wrap: wrap;
+    }
+    &__item {
+      // flex: 0 1 50%;
+      // padding: 10px;
+      // flex: 0 1 50%;
+      padding: 10px;
+    }
+    &__img {}
+    &__discription {}
+  }
 }
 //?----------------------------- important -- end -----------------------------
 //!----- contacts -----
@@ -212,6 +447,23 @@
 }
 .title-block {}
 .button-block {}
+//!------------------  media -- min-width -- 600px  ------------------
+@media(min-width:610px) {
+  .contacts {
+    padding: 240px 0 75px;
+    &__title {}
+    &__text {}
+    &__name {
+      // margin-right: 35px;
+    }
+    &__name,
+    &__email {
+      max-width: 270px;
+    }
+    &__email {}
+    &__btn {}
+  }
+}
 //?----------------------------- contacts -- end -----------------------------
 //!----- blog-row -----
 //?----------------------------- blog-row -- media ---------------------------
@@ -224,9 +476,22 @@
   &__btn {}
   &__link {}
 }
-.button-block {
+//!------------------  media -- min-width -- 768px  ------------------
+@media(min-width:768px) {
+  .blog-row {
+    &__container {}
+    &__list {
+      display: flex;
+    }
+    &__item {}
+    &__img {}
+    &__text {
+      font-size: 24px;
+    }
+    &__btn {}
+    &__link {}
+  }
 }
-
 //?----------------------------- blog-row -- end -----------------------------
 //!----- choose -----
 //?----------------------------- choose -- media ---------------------------
@@ -238,8 +503,7 @@
   &__item {}
   &__card {}
 }
-.title-block {
-}
+.title-block {}
 .tabs-btn {
   &__item {}
 }
@@ -250,15 +514,121 @@
   &__prise {}
   &__link {}
 }
-.choose {
-  &__inner {}
+//!------------------  media -- max-width -- 1024px  ------------------
+@media(max-width:1024px) {
+  .choose {
+    &__container {}
+    &__title {}
+    &__tabs {}
+    &__content {}
+    &__item {
+      gap: 50px 20px;
+    }
+    &__card {}
+  }
+  .title-block {}
+  .tabs-btn {
+    justify-content: start;
+    &__item {}
+  }
+  .card {
+    &__img {}
+    &__title {}
+    &__text {}
+    &__prise {}
+    &__link {}
+  }
+  .choose {
+    &__inner {}
+  }
 }
-.inner {
-  &__button {}
+//!------------------  media -- min-width -- 480px  ------------------
+@media(min-width:480px) {
+  .choose {
+    padding: 150px 0 75px;
+    &__container {}
+    &__title {
+      margin: 90px 0 50px;
+    }
+    &__tabs {
+      margin: 0px auto 50px;
+    }
+    &__content {}
+    &__item {
+      display: none;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 100px 40px;
+      &.choose__item--active {
+        display: grid;
+      }
+    }
+    &__card {}
+  }
+  .title-block {}
+  .tabs-btn {
+    display: flex;
+    &__item {
+      width: auto;
+      margin: 20px;
+    }
+  }
+  .card {
+    margin-bottom: 0px;
+    &__img {}
+    &__title {}
+    &__text {}
+    &__prise {}
+    &__link {}
+  }
 }
-.button-block {
+//!------------------  media -- min-width -- 768px  ------------------
+@media(min-width:768px) {
+  .choose {
+    &__container {}
+    &__title {}
+    &__tabs {}
+    &__content {}
+    &__item {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &__card {}
+  }
+  .title-block {}
+  .tabs-btn {
+    &__item {}
+  }
+  .card {
+    &__img {}
+    &__title {}
+    &__text {}
+    &__prise {}
+    &__link {}
+  }
 }
-
+//!------------------  media -- min-width -- 1024px  ------------------
+@media(min-width:1024px){
+  .choose {
+    &__container {}
+    &__title {}
+    &__tabs {}
+    &__content {}
+    &__item {
+      // grid-template-columns: repeat(4, 1fr);
+    }
+    &__card {}
+  }
+  .title-block {}
+  .tabs-btn {
+    &__item {}
+  }
+  .card {
+    &__img {}
+    &__title {}
+    &__text {}
+    &__prise {}
+    &__link {}
+  }
+}
 //?----------------------------- choose -- end -----------------------------
 //   1046
 //   667
